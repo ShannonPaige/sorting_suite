@@ -14,22 +14,20 @@ module SortingSuite
         number = unsorted.shift
         index = 0
         while index < array_size
-          if sorted[index] == nil
+          if sorted[index].nil?
             sorted[index] = number
             break
           elsif number < sorted[index]
             sorted.insert(index, number)
             sorted.pop
-            sorted
             break
           else
             index += 1
           end
         end
-      pass += 1
+        pass += 1
       end
       sorted
     end
-
   end
 end

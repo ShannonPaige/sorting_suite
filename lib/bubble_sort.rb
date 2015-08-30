@@ -27,6 +27,5 @@ module SortingSuite
         right_index += 1
       end
     end
-
   end
 end
