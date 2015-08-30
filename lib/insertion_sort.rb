@@ -27,7 +27,6 @@ module SortingSuite
           end
         end
       pass += 1
-      sorted
       end
       sorted
     end
