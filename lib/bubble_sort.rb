@@ -6,20 +6,6 @@ module SortingSuite
       @unsorted = unsorted
     end
 
-    # def sort
-    #   (unsorted.count - 1).times do
-    #     unsorted.each_index do |i|
-    #       if i < (unsorted.count - 1)
-    #         if unsorted[i] > unsorted[i + 1]
-    #           bigger_number = unsorted.delete_at(i)
-    #           unsorted.insert(i + 1, bigger_number)
-    #         end
-    #       end
-    #     end
-    #   end
-    #   unsorted
-    # end
-
     def sort
       (unsorted.length - 1).times do
         left_index = 0
@@ -44,5 +30,3 @@ module SortingSuite
 
   end
 end
-
-SortingSuite::BubbleSort.new([4, 0, 3, 2, 1]).sort
