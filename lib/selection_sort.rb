@@ -1,7 +1,7 @@
 module SortingSuite
   class Selection
-    attr_accessor :unsorted  # => nil
-    attr_accessor :sorted    # => nil
+    attr_accessor :unsorted
+    attr_accessor :sorted
 
     def initialize(unsorted = [0, 1, 2, 3, 4])
       @unsorted = unsorted
@@ -27,14 +27,10 @@ module SortingSuite
         pass += 1
       end
       p sorted
-    end                                       # => :initialize
-  end                                         # => :initialize
-end                                           # => :initialize
+    end
+  end
+end
 
-# SortingSuite::Selection.new([3, 2, 1])  # => #<SortingSuite::Selection:0x007f9cfa878590 @unsorted=[3], @sorted=[1, 2, 3]>
-SortingSuite::Selection.new(unsorted)  # ~> NameError: undefined local variable or method `unsorted' for main:Object
-
-# ~> NameError
-# ~> undefined local variable or method `unsorted' for main:Object
-# ~>
-# ~> /Users/shannonpaige/code/sorting-suite/lib/selection_sort.rb:35:in `<main>'
+SortingSuite::Selection.new([3, 2, 1])
+array = [4, 0, 2, 3, 1]
+SortingSuite::Selection.new(array)
