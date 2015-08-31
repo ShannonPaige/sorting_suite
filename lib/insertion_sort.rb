@@ -1,10 +1,10 @@
 module SortingSuite
   class InsertionSort
-    attr_accessor :unsorted  # => nil
+    attr_accessor :unsorted
 
     def initialize(unsorted)
-      @unsorted = unsorted    # => [3, 2, 1]
-    end                       # => :initialize
+      @unsorted = unsorted
+    end
 
     def sort
       pass = 0
@@ -28,30 +28,44 @@ module SortingSuite
         pass += 1
       end
       sorted
-    end                                   # => :sort
+    end
 
-    def inplace_sort                # ~> ArgumentError: wrong number of arguments (0 for 1)
-      unsorted.each_index do |i|
-        if i == 0
-          number = unsorted[i]
-        else
-          index = 0
-          while index < i
-            if unsorted[i] < unsorted[index]
-              number = unsorted.delete_at(i)
-              unsorted.insert(index, number)
-            end
-          end
-        end
-      end
-    end  # => :inplace_sort
-  end    # => :inplace_sort
-end      # => :inplace_sort
+    # def inplace_sort
+    #   pass = 0
+    #   array_size = unsorted.length
+    #   number = unsorted[0]
+    #   while pass < (array_size)
+    #     index = 0
+    #     while index < array_size
+    #       if unsorted[index] > unsorted[index+1]
+    #         number = unsorted.delete_at(index)
+    #         unsorted.insert(pass, number)
+    #         break
+    #       else
+    #         index += 1
+    #       end
+    #     end
+    #     pass += 1
+    #   end
+    #   unsorted
+    # end
 
-SortingSuite::InsertionSort.new([3, 2, 1]).inplace_sort
+    # def inplace_sort
+    #   unsorted.each_index do |i|
+    #     if i == 0
+    #       number = unsorted[i]
+    #     else
+    #       index = 0
+    #       while index < i
+    #         if unsorted[i] < unsorted[index]
+    #           number = unsorted.delete_at(i)
+    #           unsorted.insert(index, number)
+    #         end
+    #       end
+    #     end
+    #   end
+    # end                                       # => :inplace_sort
+  end
+end
 
-# ~> ArgumentError
-# ~> wrong number of arguments (0 for 1)
-# ~>
-# ~> /Users/shannonpaige/code/sorting-suite/lib/insertion_sort.rb:33:in `inplace_sort'
-# ~> /Users/shannonpaige/code/sorting-suite/lib/insertion_sort.rb:74:in `<main>'
+#SortingSuite::InsertionSort.new([3,1,2, 7,3,4,9,2]).inplace_sort
